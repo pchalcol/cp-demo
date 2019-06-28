@@ -1,0 +1,34 @@
+{
+  "type": "record",
+  "name": "WikiEditEvent",
+  "namespace": "com.github.pchalcol.wikiedit.standalone",
+  "fields": [
+    {
+      "name": "username",
+      "type": "string"
+    },
+    {
+      "name": "channel",
+      "type": "string"
+    },
+    {
+      "name": "commitMessage",
+      "type": "string"
+    },
+    {
+      "name": "wikiPage",
+      "type": "string"
+    },
+    {
+      "name": "diffurl",
+      "type": "string"
+    },
+    {
+      "name": "createdAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "type": "record",
+  "name": "WikiEdit",
+  "namespace": "com.github.cjmatta.kafka.connect.transform.wikiedit",
+  "fields": [
+    {
+      "name": "createdat",
+      "type": {
+        "type": "long",
+        "connect.doc": "The timestamp of the edit",
+        "connect.version": 1,
+        "connect.name": "org.apache.kafka.connect.data.Timestamp",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "The timestamp of the edit"
+    },
+    {
+      "name": "wikipage",
+      "type": {
+        "type": "string",
+        "connect.doc": "The page that was edited"
+      },
+      "doc": "The page that was edited"
+    },
+    {
+      "name": "channel",
+      "type": {
+        "type": "string",
+        "connect.doc": "The source channel the edit came through"
+      },
+      "doc": "The source channel the edit came through"
+    },
+    {
+      "name": "username",
+      "type": {
+        "type": "string",
+        "connect.doc": "Username of editor"
+      },
+      "doc": "Username of editor"
+    },
+    {
+      "name": "commitmessage",
+      "type": {
+        "type": "string",
+        "connect.doc": "Commit message for edit."
+      },
+      "doc": "Commit message for edit."
+    },
+    {
+      "name": "bytechange",
+      "type": {
+        "type": "int",
+        "connect.doc": "number of bytes added or removed with this edit."
+      },
+      "doc": "number of bytes added or removed with this edit."
+    },
+    {
+      "name": "diffurl",
+      "type": {
+        "type": "string",
+        "connect.doc": "The URL showing the edit diff."
+      },
+      "doc": "The URL showing the edit diff."
+    },
+    {
+      "name": "isnew",
+      "type": {
+        "type": "boolean",
+        "connect.doc": "Is this a new page?",
+        "connect.default": false
+      },
+      "doc": "Is this a new page?",
+      "default": false
+    },
+    {
+      "name": "isminor",
+      "type": {
+        "type": "boolean",
+        "connect.doc": "Is this edit minor?",
+        "connect.default": false
+      },
+      "doc": "Is this edit minor?",
+      "default": false
+    },
+    {
+      "name": "isbot",
+      "type": {
+        "type": "boolean",
+        "connect.doc": "Is this an edit by a bot?",
+        "connect.default": false
+      },
+      "doc": "Is this an edit by a bot?",
+      "default": false
+    },
+    {
+      "name": "isunpatrolled",
+      "type": {
+        "type": "boolean",
+        "connect.doc": "Is this edit unpatrolled?",
+        "connect.default": false
+      },
+      "doc": "Is this edit unpatrolled?",
+      "default": false
+    }
+  ],
+  "connect.doc": "The parsed Wikipedia Edit",
+  "connect.name": "com.github.cjmatta.kafka.connect.transform.wikiedit.WikiEdit"
+}

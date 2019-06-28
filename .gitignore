@@ -15,3 +15,8 @@ scripts/security/*.der
 scripts/security/*.p12
 
 ui/expanded
+
+target/
+logs/
+.idea/
+*.iml
